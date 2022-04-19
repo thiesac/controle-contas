@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Controle de Contas</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="caixa">
+            <h1>Controle de Contas</h1>
+
+            <div>
+                <h2>Receita</h2>
+                <input type="number" placeholder="Valor da receita" id="item">
+                <button onclick="adicionarItem()">Adicionar</button>
+            </div>
+
+            <div>
+                <h2>Despesa</h2>
+                <input type="number" placeholder="Valor da despesa" id="itemDespesa">
+                <button onclick="removerItem()">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="caixa2">
+            <div>
+                <h2 id="h2Controle">Total de receitas: R$ </h2>
+                <h3 id="controleReceita"></h3>
+            </div>
+            <div>
+                <h2 id="h2Controle">Total de despesas: R$ </h2>
+                <h3 id="controleDespesa"></h3>
+            </div>
+            <div>
+                <h2 id="h2Balanco">Balanço: R$ </h2>
+                <h3 id="balancoFinal" onload="balancoFinal()"></h3>
+            </div>
+        </div>
+    </body>
+</html>

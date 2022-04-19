@@ -1,0 +1,66 @@
+body {
+    background-color: #e3916eba;
+   }
+/* caixa principal de receitas e despesas */
+.caixa, .caixa2 {
+   background-color: rgba(255, 255, 255, 0.629);
+   border-radius: 5px;
+   text-align: center;
+   margin: 30px 400px;
+   padding: 20px;
+   color: grey;
+}
+/* títula página */
+h1 {
+    font-family: sans-serif;
+    font-weight: 400;
+    color: gray;
+}
+/* h2 da caixa principal */
+h2 {
+    font-family: sans-serif;
+    font-weight: 300;
+    color: gray;
+    font-size: 18px;
+}
+
+input {
+    text-align: center;
+    padding: 8px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 1px solid #e3916e;
+    color: grey;
+}
+
+button {
+    border-radius: 3px;
+    border: none;
+    padding: 7px;
+    background-color: #e3916e;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: darkgray;
+}
+
+/* imprime para usuário */
+
+#h2Controle {
+    font-size: 16px;
+    display: inline;
+}
+/* imprime total de receitas */
+#controleReceita {
+    color: #03bb85;
+    font-weight: 300;
+    display: inline;
+}
+
+#controleDespesa {
+    color: #ff5147;
+    display: inline;
+    font-weight: 300;
+}
