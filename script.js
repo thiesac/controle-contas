@@ -16,11 +16,11 @@ function adicionarItem() {
         //soma valor
             for (let i = 0; i < listaReceita.length; i++) {
                 soma += parseFloat(listaReceita[i]);
-                //imprime valor na tela e limpa
-                    document.getElementById("item").value = ""
-                    document.getElementById("controleReceita").innerText = soma.toLocaleString("pt-BR")
-                    balancoFinal()
             }
+            //imprime valor na tela e limpa
+                document.getElementById("item").value = "";
+                document.getElementById("controleReceita").innerText = soma.toFixed(2);
+                balancoFinal()
     }
 }
 
@@ -37,17 +37,17 @@ function removerItem() {
 //subtrai valor
             for (let i = 0; i < listaDespesa.length; i ++) {
                 somaDespesa += parseFloat(listaDespesa[i]);
-                //imprime valor na tela e limpa
-                document.getElementById("itemDespesa").value = ""
-                document.getElementById("controleDespesa").innerText = somaDespesa.toLocaleString("pt-BR")
-                balancoFinal()
             }
+            //imprime valor na tela e limpa
+            document.getElementById("itemDespesa").value = ""
+            document.getElementById("controleDespesa").innerText = somaDespesa.toFixed(2);
+            balancoFinal()
     }
 }
 
 function balancoFinal() {
-    let balanco = (soma - somaDespesa);
-    let imprimeBalanco = document.getElementById("balancoFinal")
+    let balanco = (soma - somaDespesa).toFixed(2);
+    let imprimeBalanco = document.getElementById("balancoFinal");
     //Verifica se balanço é positivo (verde) ou negativo (vermelho)
     if (balanco < 0) {
         imprimeBalanco.innerText = balanco;
