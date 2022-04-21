@@ -19,6 +19,7 @@ function adicionarItem() {
                 //imprime valor na tela e limpa
                     document.getElementById("item").value = ""
                     document.getElementById("controleReceita").innerText = soma.toLocaleString("pt-BR")
+                    balancoFinal()
             }
     }
 }
@@ -39,14 +40,23 @@ function removerItem() {
                 //imprime valor na tela e limpa
                 document.getElementById("itemDespesa").value = ""
                 document.getElementById("controleDespesa").innerText = somaDespesa.toLocaleString("pt-BR")
+                balancoFinal()
             }
     }
 }
-//NÃO ESTÁ FUNCIONANDO!!!
-//função que calcula o balanço final
+
 function balancoFinal() {
     let balanco = (soma - somaDespesa);
-    document.getElementById("balancoFinal").innerHTML = balanco
+    let imprimeBalanco = document.getElementById("balancoFinal")
+    //Verifica se balanço é positivo (verde) ou negativo (vermelho)
+    if (balanco < 0) {
+        imprimeBalanco.innerText = balanco;
+        imprimeBalanco.style.color = "#ff5147";
+
+    } else {
+        imprimeBalanco.innerText = balanco;
+        imprimeBalanco.style.color = "#03bb85";
+    }
 }
 
 
